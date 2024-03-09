@@ -1,6 +1,5 @@
 from dataclasses import dataclass
-from openai import OpenAI
-from util.OpenAiClient import default_client
+from service.util.open_ai_client import default_client
 
 
 @dataclass

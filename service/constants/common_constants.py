@@ -1,0 +1,4 @@
+API_KEY = "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"
+THREAD_ID = "thread_ajTl9hRLlzuJktppWmgOU5Ye"
+ASSISTANT_ID = "asst_9kinSi9VjiO7q8evYjKSnP48"
+RUN_ID = "run_5XEu3E1nbhlG11FT4JYLVqPL"
