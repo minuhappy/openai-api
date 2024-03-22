@@ -1,4 +1,5 @@
 from service.util import open_ai_client
+from service.util.json_util import JsonUtil
 
 
 class RunService:
@@ -8,7 +9,7 @@ class RunService:
             thread_id=thread_id,
             assistant_id=assistant_id
         )
-        print(run)
+        JsonUtil.print_json(run)
 
     def retrieve(self, thread_id, run_id):
         client = open_ai_client.default_client
@@ -16,11 +17,11 @@ class RunService:
             thread_id=thread_id,
             run_id=run_id
         )
-        print(run)
+        JsonUtil.print_json(run)
 
     def list_runs(self, thread_id):
         client = open_ai_client.default_client
         runs = client.beta.threads.runs.list(
             thread_id=thread_id
         )
-        print(runs)
+        JsonUtil.print_json(runs)

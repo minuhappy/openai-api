@@ -1,4 +1,6 @@
 from dataclasses import dataclass
+
+from service.util.json_util import JsonUtil
 from service.util.open_ai_client import default_client
 
 
@@ -16,12 +18,15 @@ class AssistantConfig:
 class AssistantsService:
     @staticmethod
     def create_assistant(config: AssistantConfig):
-        return default_client.beta.assistants.create(
+        assistant = default_client.beta.assistants.create(
             name=config.name,
             instructions=config.instructions,
             tools=config.tools,
             model=config.model
         )
+
+        JsonUtil.print_json(assistant)
+        return assistant
 
 # class AssistantsService:
 #     def __init__(self, api_key):
