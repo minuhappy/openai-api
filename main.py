@@ -17,8 +17,8 @@ def main():
     # ThreadService().create()
     # MessageService().create(THREAD_ID, "Hello")
     # RunService().create(THREAD_ID, ASSISTANT_ID)
-    RunService().retrieve(THREAD_ID, 'run_4FSTkbiVwKK8k3XbKXV2JPTw')
-    # MessageService().list_messages(THREAD_ID)
+    # RunService().retrieve(THREAD_ID, 'run_4FSTkbiVwKK8k3XbKXV2JPTw')
+    MessageService().list_messages(THREAD_ID)
 
 
 if __name__ == "__main__":

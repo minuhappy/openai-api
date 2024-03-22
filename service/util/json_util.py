@@ -12,7 +12,7 @@ class JsonUtil:
     @staticmethod
     def object_to_json(obj: Any):
         try:
-            return json.dumps(obj)
+            return json.dumps(obj, indent=4)
         except:
             return JsonUtil.to_dict(obj=obj)
 
@@ -39,8 +39,8 @@ class JsonUtil:
             if hasattr(v, '__dict__') or isinstance(v, list):
                 new_result[k] = JsonUtil.to_dict(v)
             elif v is None:
-                pass
                 # new_result[k] = ''
+                pass
             else:
                 new_result[k] = v
 
